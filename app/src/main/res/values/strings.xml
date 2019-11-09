@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Drăcia Dracului</string>
+    <string name="button_tweet">Tweet</string>
+    <string name="hint_status">"What's going on?"</string>
+    <string name="action_settings">Settings</string>
+    <string name="username_summary">username_summary</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="password_summary">password_summary</string>
+    <string name="tweet">tweet</string>
+    <string name="refresh">refresh</string>
+    <string name="purge">purge</string>
+    <string name="titlePrefs">titlePrefs</string>
+    <string name="titleRefresh">titleRefresh</string>
+    <string name="itemRefresh">itemRefresh</string>
+</resources>
