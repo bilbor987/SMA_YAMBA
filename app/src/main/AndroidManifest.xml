@@ -14,10 +14,8 @@
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".StatusActivity"
-            android:label="@string/status_update">
-        </activity>
-        <activity android:name=".MainActivity">
+
+        <activity android:name="com.marakana.yamba.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +23,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.marakana.yamba.StatusActivity"
+            android:label="@string/status_update">
+            <intent-filter>
+                <action android:name="com.marakana.android.yamba.action.tweet" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
             android:name=".SettingsActivity"
             android:label="@string/action_settings">
         </activity>
+
+        <activity android:name="com.marakana.yamba.DetailsActivity" />
 
         <service android:name=".RefreshService" />
 
