@@ -47,7 +47,8 @@ public class RefreshService extends IntentService {
         }
         Log.d(TAG, "onStarted");
         ContentValues values = new ContentValues();
-        YambaClient cloud = new YambaClient(username, password, "http://yamba.newcircle.com/api");
+        //YambaClient cloud = new YambaClient(username, password);
+        YambaClient cloud = new YambaClient(username, password, "http://yamba.newcircle.com/");
         try {
             int count = 0;
             List<YambaClient.Status> timeline = cloud.getTimeline(20);
@@ -64,7 +65,7 @@ public class RefreshService extends IntentService {
                 }
                 Log.d(TAG, "" + count);
                 if (count > 0) {
-                    sendBroadcast(new Intent("com.marakana.android.yamba.action.NEW_STATUSES")
+                    sendBroadcast(new Intent("com.marakana.yamba.action.NEW_STATUSES")
                             .putExtra("count", count));
                 }
             }
@@ -74,13 +75,6 @@ public class RefreshService extends IntentService {
         }
         return;
     }
-
-//    @Override
-//    public int onStartCommand(Intent intent, int flags, int startId) {
-//        super.onStartCommand(intent, flags, startId);
-//        Log.d(TAG, "onStarted");
-//        return START_STICKY;
-//    }
 
     @Override
     public void onDestroy() {
