@@ -48,7 +48,7 @@ public class RefreshService extends IntentService {
         Log.d(TAG, "onStarted");
         ContentValues values = new ContentValues();
         //YambaClient cloud = new YambaClient(username, password);
-        YambaClient cloud = new YambaClient(username, password, "http://yamba.newcircle.com/");
+        YambaClient cloud = new YambaClient(username, password, "http://yamba.newcircle.com/api");
         try {
             int count = 0;
             List<YambaClient.Status> timeline = cloud.getTimeline(20);

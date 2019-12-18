@@ -9,12 +9,13 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name="com.marakana.yamba.MainActivity">
@@ -28,7 +29,7 @@
             android:name="com.marakana.yamba.StatusActivity"
             android:label="@string/status_update">
             <intent-filter>
-                <action android:name="com.marakana.android.yamba.action.tweet" />
+                <action android:name="com.marakana.yamba.action.tweet" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 

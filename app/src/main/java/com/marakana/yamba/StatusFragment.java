@@ -87,7 +87,7 @@ public class StatusFragment extends Fragment implements View.OnClickListener {
         // when finished it returns the string to the onPostExecute input string
         @Override
         protected String doInBackground(String... params) {
-            YambaClient yambaCloud = new YambaClient("student", "password");
+            YambaClient yambaCloud = new YambaClient("student", "password", "http://yamba.newcircle.com/api");
             try {
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 String username = prefs.getString("username", "");
